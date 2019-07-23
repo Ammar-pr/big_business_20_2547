@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-21 20:48:28
+/* Smarty version 3.1.33, created on 2019-07-23 08:51:29
   from 'C:\xampp\htdocs\big_business_20_2547\templates\manage_reports.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d34b37c100f82_77294800',
+  'unifunc' => 'content_5d36ae71201bb1_90319296',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '26781e190c9373457325898539a3e675810d7167' => 
     array (
       0 => 'C:\\xampp\\htdocs\\big_business_20_2547\\templates\\manage_reports.tpl',
-      1 => 1561658098,
+      1 => 1563864535,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d34b37c100f82_77294800 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d36ae71201bb1_90319296 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <center><h2>تقارير الحالة والطلبات </h2></center>
  <br>
@@ -37,6 +37,7 @@ function content_5d34b37c100f82_77294800 (Smarty_Internal_Template $_smarty_tpl)
          <th scope="col">رمز مدخل الطلب</th>
 		  <th scope="col">حالة الطلب</th>
 		  <th scope="col"> تأكيد الحالة </th>
+  <th scope="col"> المدربة </th>
     </tr>
   </thead>
   <tbody>
@@ -62,6 +63,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
 "   onclick="return confirm('هل انت متأكد من أنك تريد تأكيد هذه السحالة ؟');" > 
 تأكيد
 </a></td>
+
+<td><?php echo $_smarty_tpl->tpl_vars['row']->value['Name_of_Trainer'];?>
+</td>
+
     </tr>
 <?php
 }
