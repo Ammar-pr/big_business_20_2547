@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+<script language="javascript" type="text/javascript">
+function f1(obj)
+{
+document.getElementById("my_s").style.display = 'none';
+document.getElementById("my_p").style.display = 'none';
+document.getElementById("my_a").style.display = 'none';
+document.getElementById("my_f").style.display = 'none';
+var value = ""+obj.value;
+if(value=='s'){
+var element = document.getElementById("my_"+value); 
+element.style.display = 'block';
+
+}
+
+}
+
+
+function f2(obj)
+{
+document.getElementById("bb").style.display = 'none';
+var value = ""+obj.value;
+if(value=='re'){
+var element = document.getElementById("bb");
+element.style.display = 'block';
+
+}
+
+}
+</script>
+</HEAD>
+<BODY>
+
+
+
+<BR/><input type='radio' name='catId' value='s'  onChange="f1(this)"/>Student
+<BR/><input type='radio' name='catId' value='p'  onChange="f1(this)"/>Professor
+<BR/><input type='radio' name='catId' value='a'  onChange="f1(this)"/>Admin
+<BR/><input type='radio' name='catId' value='f'  onChange="f1(this)"/>Staff
+<div id='my_s'    style="display:none">
+Student
+<select name="student_list">
+<option ''>Please Select</option>
+<option 'st001'>Ahmed</option>
+<option 'st002'>Mohamed</option>
+</select>
+</div>
+<div id='my_p'  style="display:none">
+Professor
+<select name="professor_list">
+<option ''>Please Select</option>
+<option 'p001'>Magdi</option>
+<option 'p002'>Sultan</option>
+</select>
+</div>
+<div id='my_a'   style="display:none"  >
+Administrator
+<select name="admin_list">
+<option ''>Please Select</option>
+<option 'a001'>admin1</option>
+<option 'a002'>admin2</option>
+</select>
+</div>
+<div id='my_f'   style="display:none"  >
+Staff
+<select name="staff_list">
+<option ''>Please Select</option>
+<option 'sf001'>staff1</option>
+<option 'sf002'>staff2</option>
+</select>
+</div>
+<BR/><input type='submit' value='Send'/>
+
+<select id="somthing" onChange="f2(this)">
+
+<option value="re">valrs</object
+</select>
+
+<div id="bb">ffffff </div>
+
+</BODY>
+</HTML>

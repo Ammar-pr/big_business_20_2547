@@ -1,0 +1,39 @@
+<html>
+
+
+<head>
+        <script src="../js/jquery-3.3.1.slim.min.js"  ></script>
+        <script src="../js/popper.min.js" ></script>
+        <script src="../js/bootstrap.min.js"></script>
+    
+    <script>
+        (function($) {
+            $.sanitize = function(input) {
+                var output = input.replace(/<script[^>]*?>.*?<\/script>/gi, '').
+                             replace(/<[\/\!]*?[^<>]*?>/gi, '').
+                             replace(/<style[^>]*?>.*?<\/style>/gi, '').
+                             replace(/<![\s\S]*?--[ \t\n\r]*>/gi, '');
+                return output;
+            };
+        })(jQuery);
+        
+        $(function() {
+            $('#sanitize').click(function() {
+                var $input = $('#input').val();
+                $('#output').text($.sanitize($input));
+            });
+        
+        });
+          </script>
+
+
+</head>
+
+<body>
+
+
+    <textarea cols="30" rows="10" id="input"></textarea>
+<p><button id="sanitize">Sanitize</button></p>
+<p id="output"></p>
+</body>
+</html>

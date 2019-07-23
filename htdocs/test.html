@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>jQuery Show Hide Elements Using Select Box</title>
+
+<style type="text/css">
+
+    .box{
+
+        color: #fff;
+
+        padding: 20px;
+
+        display: none;
+
+        margin-top: 20px;
+
+    }
+
+    .red{ background: #ff0000; }
+
+    .green{ background: #228B22; }
+
+    .blue{ background: #0000ff; }
+
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<script type="text/javascript">
+
+  var bv = document.getElementById("myDIV").style.display = "none";
+  var x = document.getElementById("myDIV");
+
+$(document).ready(function(){
+    $("#so").change(function(){
+         var car_plate = document.getElementById("so").value; 
+  
+        $(this).find("option:selected").each(function(){
+          
+            var optionValue = $(this).attr("value");
+
+            if(optionValue){
+          if(car_plate=="red"){
+                $(".box").not("." + optionValue).hide();
+
+                $("." + optionValue).show();
+				    x.style.display = "block";
+
+
+            }} else{
+
+                $(".box").hide();
+
+            }
+
+        });
+
+    }).change();
+
+});
+
+</script>
+
+</head>
+
+<body>
+
+<form action="gl.php" method="post" >
+
+    <div>
+
+        <select id="so">
+
+            <option>Choose Color</option>
+
+            <option value="red">Red</option>
+
+            <option value="green">Green</option>
+
+            <option value="blue">Blue</option>
+
+        </select>
+
+    </div>
+
+    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
+
+    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
+
+    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+	
+	<div id="myDIV">
+This is my DIV element.
+</div>
+</form>
+</body>
+
+</html
