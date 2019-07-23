@@ -14,6 +14,7 @@
          <th scope="col">رمز مدخل الطلب</th>
 		  <th scope="col">حالة الطلب</th>
 		  <th scope="col"> تأكيد الحالة </th>
+  <th scope="col"> المدربة </th>
     </tr>
   </thead>
   <tbody>
@@ -26,7 +27,7 @@
 	  <td>{$row.ex_id}</td>
         <td>{$row.car_status}</td>
 		 <td><a  href="update.php?id={$row.id}"   onclick="return confirm('هل انت متأكد من أنك تريد تأكيد هذه السحالة ؟');" > 
-تأكيد
+تأكيدd
 </a></td>
     </tr>
 {/foreach}
