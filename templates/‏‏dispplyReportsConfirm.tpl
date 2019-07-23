@@ -13,6 +13,7 @@
         <th scope="col">البنزين</th>
          <th scope="col">رمز مدخل الطلب</th>
 		  <th scope="col">حالة الطلب</th>
+		    <th scope="col">اسم المدربة</th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +27,8 @@
 	  <td>{$row.ex_id}</td>
         <td>{$row.request_status}</td>
 </a></td>
+
+<td>{$row.Name_of_Trainer}</td>
     </tr>
 {/foreach}
 

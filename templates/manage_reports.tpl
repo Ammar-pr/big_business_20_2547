@@ -27,8 +27,11 @@
 	  <td>{$row.ex_id}</td>
         <td>{$row.car_status}</td>
 		 <td><a  href="update.php?id={$row.id}"   onclick="return confirm('هل انت متأكد من أنك تريد تأكيد هذه السحالة ؟');" > 
-تأكيدd
+تأكيد
 </a></td>
+
+<td>{$row.Name_of_Trainer}</td>
+
     </tr>
 {/foreach}
 
