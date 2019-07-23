@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-07-21 20:49:01
+/* Smarty version 3.1.33, created on 2019-07-23 10:17:03
   from 'C:\xampp\htdocs\big_business_20_2547\templates\‏‏dispplyReportsConfirm.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d34b39d945411_47165625',
+  'unifunc' => 'content_5d36c27f5e5273_07574738',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '95ed2dd54d6417022617507a1c41b2f3641259a9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\big_business_20_2547\\templates\\‏‏dispplyReportsConfirm.tpl',
-      1 => 1561910112,
+      1 => 1563864560,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d34b39d945411_47165625 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d36c27f5e5273_07574738 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <center><h2> التقرير بعد موافقة المركبات </h2></center>
  <br>
@@ -36,6 +36,7 @@ function content_5d34b39d945411_47165625 (Smarty_Internal_Template $_smarty_tpl)
         <th scope="col">البنزين</th>
          <th scope="col">رمز مدخل الطلب</th>
 		  <th scope="col">حالة الطلب</th>
+		    <th scope="col">اسم المدربة</th>
     </tr>
   </thead>
   <tbody>
@@ -59,6 +60,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['row']->value) {
         <td><?php echo $_smarty_tpl->tpl_vars['row']->value['request_status'];?>
 </td>
 </a></td>
+
+<td><?php echo $_smarty_tpl->tpl_vars['row']->value['Name_of_Trainer'];?>
+</td>
     </tr>
 <?php
 }
